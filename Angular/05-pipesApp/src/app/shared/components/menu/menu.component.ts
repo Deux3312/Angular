@@ -1,5 +1,6 @@
  import { MenubarModule } from 'primeng/menubar';
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 //import { MenubarModule } from 'primeng/api';
 
 @Component({
@@ -32,12 +33,9 @@ export class MenuComponent {
         label: 'Pipes Personalizados',
         icon: 'pi pi-cog',
         items:[{
-          label: 'Otro elemento',
+          label: 'Custom Pipes',
           icon: 'pi pi-cog',
-          items:[{
-            label: 'Elemento 1',
-            icon:'pi pi-cog'
-          }]
+          routerLink: 'custom'
         }]
       }
     ]
