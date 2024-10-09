@@ -1,18 +1,15 @@
 const express = require('express');
-const bodyParser = require('body-parser');
 const app = express();
-const dbConnect = require('./db/dbConnect');
-const User = require('./db/userModel');
-const newUser = new User({
-    email: 'helen.bonilla@grupolaeisz.com',
-    password: 'password123'
-})
 
+// Middleware para registrar las solicitudes
+app.use((req, res, next) => {
+    console.log(`Request Method: ${req.method}, Request URL: ${req.url}`);
+    next(); // Pasa al siguiente middleware o ruta
+});
 
-app.length('/', (req, resp) => {
-    resp.send('Hello World');
-})
+// Definir rutas aquí
+app.get('/', (req, res) => {
+    res.send('Hello World!');
+});
 
-app.listen(3000, () => {
-    console.log('Server is running on port 3000');
-})
+module.exports = app;
