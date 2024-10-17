@@ -9,6 +9,7 @@ import { UncommonPageComponent } from './pages/uncommon-page/uncommon-page.compo
 import { PrimeNGModule } from '../prime-ng/prime-ng.module';
 import { OrderComponent } from './pages/order/order.component';
 import { ToggleCasePipe } from './pipes/toggle-case.pipe';
+import { CanFly } from './pipes/can-fly.pipe';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { ToggleCasePipe } from './pipes/toggle-case.pipe';
     OrderComponent,
     //pipes
     ToggleCasePipe,
+    CanFly,
   ],
   imports: [
     CommonModule,
