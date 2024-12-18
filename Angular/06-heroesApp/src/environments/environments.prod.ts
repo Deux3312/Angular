@@ -1,3 +1,5 @@
+
+
 export const environments = {
-    baseUrl : 'https://urlprod.com:3000'
+  baseUrl: 'https://fernando-herrera.com/api'
 }
