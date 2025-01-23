@@ -10,18 +10,30 @@ export class DynamicPageComponent {
   //   favoriteGames: new FormArray([])
   // });
 
-  public myForm: FormGroup = this.fb.group({
-    name: ['', [ Validators.required, Validators.minLength(3) ]],
-    favoriteGames: this.fb.array([
-      ['Metal Gear', Validators.required ],
-      ['Death Stranding', Validators.required ],
-    ])
-  });
+  public myForm!: FormGroup;
 
   public newFavorite: FormControl = new FormControl('', Validators.required );
 
-  constructor( private fb: FormBuilder ) {}
 
+
+  constructor( private fb: FormBuilder ) {
+
+    this.myForm = this.fb.group({
+
+      name: ['', [ Validators.required, Validators.minLength(3) ]],
+
+      favoriteGames: this.fb.array([
+
+        ['Metal Gear', Validators.required ],
+
+        ['Death Stranding', Validators.required ],
+
+      ])
+
+    });
+
+  }
+  
   get favoriteGames() {
     return this.myForm.get('favoriteGames') as FormArray;
   }
