@@ -3,7 +3,7 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';
+import { ProductsModule } from './products/products.module';
 
 @NgModule({
   declarations: [
@@ -12,11 +12,10 @@ import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
+    ProductsModule
   ],
   providers: [
-    provideClientHydration(),
-    provideHttpClient(withFetch())
+    provideClientHydration()
   ],
   bootstrap: [AppComponent]
 })
