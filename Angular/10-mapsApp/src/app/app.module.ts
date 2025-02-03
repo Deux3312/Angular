@@ -3,7 +3,7 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MapsModule } from './maps/maps/maps.module';
+import { MapsModule } from './maps/maps.module';
 
 @NgModule({
   declarations: [
