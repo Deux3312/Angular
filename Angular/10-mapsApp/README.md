@@ -25,3 +25,9 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+##Pasos:
+1. clonar el .env.template y renombrarlo a .env
+2. llenar las variables de entorno acorde.
+3. crear angular envs (opcional).
+4. ejecutar npm start para iniciar el servidor de desarrollo y crear los envs
